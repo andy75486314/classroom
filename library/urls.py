@@ -26,6 +26,8 @@ urlpatterns = [
     path('book/', include('book.urls')),
     path('reader/', include('reader.urls')),
     path('log/', include('log.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('staff/', include('staff.urls')),
 ]
 
 # 加入靜態檔案的處理規則

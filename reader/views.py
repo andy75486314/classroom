@@ -3,6 +3,8 @@ from django.views.generic import *
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import *
 from log.models import Log
+from django.contrib.auth.mixins import PermissionRequiredMixin
+
 
 # Create your views here.
 class ReaderList(LoginRequiredMixin, ListView):     # 讀者列表
@@ -36,3 +38,4 @@ class ReaderDelete(LoginRequiredMixin, DeleteView): # 刪除讀者
     model = Reader
     template_name = 'confirm_delete.html'
     success_url = reverse_lazy('reader_list')
+    

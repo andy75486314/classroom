@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if perms.auth.add_user %}
 <div class="mb-1">
   <a href="{% url 'book_add' %}" class="btn btn-sm btn-primary">
-    <i class="fas fa-plus"></i> 新增圖書
+    <i class="fas fa-plus"></i> 新增教室
   </a>
 </div>
+{% endif %}
 <div id="book-list" class="card-group">
   {% for book in book_list %}
   <div class="card shadow-sm">

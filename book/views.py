@@ -3,6 +3,8 @@ from django.views.generic import *
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import *
 from log.models import Log
+from django.contrib.auth.mixins import PermissionRequiredMixin
+
 
 # Create your views here.
 class BookList(LoginRequiredMixin, ListView):   # 圖書列表

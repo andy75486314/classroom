@@ -6,7 +6,7 @@ from reader.models import *
 class Log(Model):
     reader = ForeignKey(Reader, CASCADE)
     book = ForeignKey(Book, CASCADE)
-    checkout = DateTimeField('借閱時間', auto_now_add=True)
+    checkout = DateTimeField('借用時間', auto_now_add=True)
     returned = DateTimeField('歸還時間', null=True)
 
     def __str__(self):

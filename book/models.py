@@ -13,10 +13,9 @@ from django.db.models import *
 
 # 圖書
 class Book(Model):
-    title = CharField('書名', max_length=255)
-    author = CharField('作者', max_length=255)
-    publisher = CharField('出版社', max_length=255)
-    preface = ImageField('封面圖片')
+    title = CharField('教室號碼', max_length=255)
+    author = CharField('教室類型', max_length=255)
+    preface = ImageField('教室圖片')
 
     def __str__(self):
         return "{}: {}".format(self.author, self.title)
